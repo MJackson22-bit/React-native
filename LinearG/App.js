@@ -8,7 +8,10 @@
 
 import React, {Component} from 'react';
 // eslint-disable-next-line no-unused-vars
-import {View, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet, Text, Image, Button} from 'react-native';
+
+// eslint-disable-next-line no-unused-vars
+import ReactDOM from 'react-dom';
 import LinearGradient from 'react-native-linear-gradient';
 
 class App extends Component {
@@ -20,7 +23,13 @@ class App extends Component {
         locations={[0, 0.5, 1.1]}
         colors={['#151515', '#2d2e41', '#a50e6f']}
         style={styles.linearGradient}>
-        <Text style={styles.buttonText}>Vaint Service</Text>
+        <Image style={styles.img} source={require('./images/vs.png')} />
+        <View style={styles.btnAcceder}>
+          <Button title="Acceder" color="#2d2e41" size="medium" />
+        </View>
+        <View style={styles.btnReg}>
+          <Button title="Registrarse" color="#2d2e41" size="medium" />
+        </View>
       </LinearGradient>
     );
   }
@@ -41,6 +50,22 @@ var styles = StyleSheet.create({
     margin: 20,
     color: '#ffffff',
     backgroundColor: 'transparent',
+  },
+  img: {
+    alignItems: 'center',
+    width: 355,
+    marginBottom: 30,
+  },
+  btnAcceder: {
+    backgroundColor: 'white',
+    marginBottom: 30,
+    marginRight: '20%',
+    marginLeft: '20%',
+  },
+  btnReg: {
+    backgroundColor: 'white',
+    marginRight: '20%',
+    marginLeft: '20%',
   },
 });
 /*const styles = StyleSheet.create({
