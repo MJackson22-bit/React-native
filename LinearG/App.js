@@ -43,14 +43,6 @@ var styles = StyleSheet.create({
     paddingRight: 15,
     borderRadius: 5,
   },
-  buttonText: {
-    fontSize: 40,
-    fontFamily: 'Gill Sans',
-    textAlign: 'center',
-    margin: 20,
-    color: '#ffffff',
-    backgroundColor: 'transparent',
-  },
   img: {
     alignItems: 'center',
     width: 355,
@@ -68,13 +60,4 @@ var styles = StyleSheet.create({
     marginLeft: '20%',
   },
 });
-/*const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'orange',
-  },
-});
-*/
 export default App;
