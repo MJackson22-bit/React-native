@@ -20,7 +20,7 @@ class App extends Component {
         locations={[0, 0.5, 1.1]}
         colors={['#151515', '#2d2e41', '#a50e6f']}
         style={styles.linearGradient}>
-        <Text style={styles.buttonText}>Sign in with Facebook</Text>
+        <Text style={styles.buttonText}>Vaint Service</Text>
       </LinearGradient>
     );
   }
@@ -35,10 +35,10 @@ var styles = StyleSheet.create({
     borderRadius: 5,
   },
   buttonText: {
-    fontSize: 18,
+    fontSize: 40,
     fontFamily: 'Gill Sans',
     textAlign: 'center',
-    margin: 10,
+    margin: 20,
     color: '#ffffff',
     backgroundColor: 'transparent',
   },
