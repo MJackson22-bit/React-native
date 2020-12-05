@@ -36,7 +36,7 @@ class Register extends Component {
               placeholder="Correo Electrónico"
               placeholderTextColor="#fff"
               autoCapitalize="none"
-              s
+              keyboardType="email-address"
             />
             <TextInput
               style={styles.input}
@@ -44,6 +44,7 @@ class Register extends Component {
               placeholder="Contraseña"
               placeholderTextColor="#FFFF"
               autoCapitalize="none"
+              autoCompleteType="password"
             />
             <TextInput
               style={styles.input}
