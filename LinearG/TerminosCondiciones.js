@@ -1,20 +1,18 @@
 /* eslint-disable prettier/prettier */
-import React, {Component} from 'react';
-import {View, ScrollView, StyleSheet, Text, CheckBox} from 'react-native';
+import React, {useState} from 'react';
+import {View, ScrollView, StyleSheet, Text, CheckBox, Button} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import useState from 'react-hook-use-state';
 
-const [isSelected, setSelection] = useState(false);
-class TerminosCondiciones extends Component{
-    render(){
-        return (
-            <LinearGradient start={{x: -0.4, y: 0.4}}
-            end={{x: 0.9, y: 1.2}}
-            locations={[0, 0.6, 1.1]}
-            colors={['#FFFF', '#0017ff', '#0017ff']}
-            style={styles.linearGradient}>
-            <View>
-             <View style={styles.vTitle}>
+const TerminosCondiciones = () => {
+    const [isSelected, setSelection] = useState(false);
+    return (
+        <LinearGradient start={{x: -0.4, y: 0.4}}
+        end={{x: 0.9, y: 1.2}}
+        locations={[0, 0.6, 1.1]}
+        colors={['#FFFF', '#0017ff', '#0017ff']}
+        style={styles.linearGradient}>
+        <View>
+            <View style={styles.vTitle}>
                 <Text style={styles.textTC}>TÉRMINOS Y CONDICIONES DE LA APLICACIÓN MÓVIL</Text>
             </View>
             <ScrollView style={styles.scrollview}>
@@ -60,22 +58,29 @@ class TerminosCondiciones extends Component{
                         con anterioridad.
                     </Text>
                     <View style={styles.viewcheck}>
-                    <View style={styles.containercheck}>
-                        <CheckBox 
-                        value={isSelected}
-                        onValueChange={setSelection}
-                        style={styles.checkbox}/>
-                        <Text style={styles.textcheck}>He leido los terminos y condiciones</Text>
+                        <View style={styles.containercheck}>
+                            <CheckBox
+                            value={isSelected}
+                            onValueChange={setSelection}
+                            style={styles.checkbox}/>
+                            <Text style={styles.textcheck}>He leido los terminos y condiciones</Text>
+                        </View>
                     </View>
+                    <View style={styles.btnNext}>
+                        <Button disable={true} title="Acceder" color="#2d2631" size="medium"/>
                     </View>
                 </View>
             </ScrollView>
-            </View>
-            </LinearGradient>
-        );
-    }
-}
+        </View>
+    </LinearGradient>
+    );
+};
 var styles = StyleSheet.create({
+    btnNext: {
+    backgroundColor: 'white',
+    marginRight: '30%',
+    marginLeft: '30%',
+  },
     containercheck: {
         flexDirection: 'row',
         marginBottom: 30,
