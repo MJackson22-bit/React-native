@@ -67,7 +67,7 @@ const TerminosCondiciones = () => {
                         </View>
                     </View>
                     <View style={styles.btnNext}>
-                        <Button disable={true} title="Acceder" color="#2d2631" size="medium"/>
+                        <Button disable="true" title="Acceder" color="#2d2631" size="medium"/>
                     </View>
                 </View>
             </ScrollView>
