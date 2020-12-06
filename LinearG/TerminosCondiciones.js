@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, {useState} from 'react';
-import {View, ScrollView, StyleSheet, Text, CheckBox, Button} from 'react-native';
+import {View, ScrollView, StyleSheet, Text, CheckBox, Button, Alert, TouchableOpacity} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 const TerminosCondiciones = () => {
@@ -66,8 +66,11 @@ const TerminosCondiciones = () => {
                             <Text style={styles.textcheck}>He leido los terminos y condiciones</Text>
                         </View>
                     </View>
+                    {/*<Text>Is CheckBox selected: {isSelected ? '👍' : '👎'}</Text>*/}
                     <View style={styles.btnNext}>
-                        <Button disable="true" title="Acceder" color="#2d2631" size="medium"/>
+                        <TouchableOpacity style={styles.loginButton} disabled={!isSelected}>
+                            <Text style={styles.txtBtn}>Aceptar</Text>
+                        </TouchableOpacity>
                     </View>
                 </View>
             </ScrollView>
@@ -76,10 +79,22 @@ const TerminosCondiciones = () => {
     );
 };
 var styles = StyleSheet.create({
-    btnNext: {
-    backgroundColor: 'white',
-    marginRight: '30%',
-    marginLeft: '30%',
+    txtBtn: {
+        color:'#ffff',
+        fontWeight: 'bold',
+        fontSize: 15,
+    },
+    loginButton: {
+        borderRadius: 10,
+        alignItems: 'center',
+        backgroundColor: '#383a4b',
+        padding: 10,
+    },
+        btnNext: {
+        borderRadius: 10,
+        backgroundColor: 'white',
+        marginRight: '33%',
+        marginLeft: '33%',
   },
     containercheck: {
         flexDirection: 'row',
