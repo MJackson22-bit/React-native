@@ -18,14 +18,14 @@ class Home extends Component {
         style={styles.linearGradient}>
         <Image style={styles.img} source={require('./images/vs.png')} />
         <View style={styles.btnAcceder}>
-          <Button title="Acceder" color="#2d2e41" size="medium"
+          <Button title="Acceder" color="#3f4556" size="medium"
             onPress={() =>
                 this.props.navigation.navigate('Login')
             }
           />
         </View>
         <View style={styles.btnReg}>
-          <Button title="Registrarse" color="#2d2e41" size="medium"
+          <Button title="Registrarse" color="#3f4556" size="medium"
             onPress={() =>
                 this.props.navigation.navigate('Register')
             }

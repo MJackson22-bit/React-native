@@ -55,7 +55,10 @@ class Register extends Component {
             />
           </View>
           <View style={styles.btnLogin}>
-            <Button title="Registrarse" color="#2d2631" size="medium" />
+            <Button title="Registrarse" color="#3f4556" size="medium"
+              onPress={() =>
+                this.props.navigation.navigate('Login')
+              }/>
           </View>
         </ScrollView>
       </LinearGradient>

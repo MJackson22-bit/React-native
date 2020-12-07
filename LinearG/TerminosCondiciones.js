@@ -1,10 +1,19 @@
 /* eslint-disable prettier/prettier */
 import React, {useState} from 'react';
-import {View, ScrollView, StyleSheet, Text, CheckBox, Button, Alert, TouchableOpacity} from 'react-native';
+import {View, ScrollView, StyleSheet, Text, CheckBox, TouchableOpacity, Alert} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 const TerminosCondiciones = () => {
     const [isSelected, setSelection] = useState(false);
+     const alertaPrevia = () =>
+    Alert.alert(
+      'Aviso',
+      'La aplicación sigue en desarrollo',
+      [
+        { text: 'OK', onPress: () => console.log('OK Pressed') },
+      ],
+      { cancelable: false }
+    );
     return (
         <LinearGradient start={{x: -0.4, y: 0.4}}
         end={{x: 0.9, y: 1.2}}
@@ -68,7 +77,8 @@ const TerminosCondiciones = () => {
                     </View>
                     {/*<Text>Is CheckBox selected: {isSelected ? '👍' : '👎'}</Text>*/}
                     <View style={styles.btnNext}>
-                        <TouchableOpacity style={styles.loginButton} disabled={!isSelected}>
+                        <TouchableOpacity style={styles.loginButton} disabled={!isSelected}
+                        onPress={alertaPrevia}>
                             <Text style={styles.txtBtn}>Aceptar</Text>
                         </TouchableOpacity>
                     </View>

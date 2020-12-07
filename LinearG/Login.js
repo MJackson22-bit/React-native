@@ -29,7 +29,10 @@ class Login extends Component {
                     />
             </View>
             <View style={styles.btnLogin}>
-                <Button title="Acceder" color="#2d2631" size="medium" />
+                <Button title="Acceder" color="#3f4556" size="medium"
+                onPress={() =>
+                  this.props.navigation.navigate('TerminosCondiciones')
+                }/>
             </View>
             </ScrollView>
         </LinearGradient>
@@ -44,7 +47,6 @@ var styles = StyleSheet.create({
     borderRadius: 5,
   },
   btnLogin: {
-    backgroundColor: 'white',
     marginRight: '30%',
     marginLeft: '30%',
   },
